@@ -1,0 +1,4 @@
+<?php
+$MESS["LATENESS_ID_TITLE"] = "ID";
+$MESS["LATENESS_PROFILE_ID_TITLE"] = "User Profile ID";
+$MESS["LATENESS_DATE_TITLE"] = "Date of delay";

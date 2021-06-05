@@ -1,0 +1,6 @@
+<?php
+$MESS["PROFILE_ID_TITLE"] = "ID";
+$MESS["PROFILE_LOGIN_TITLE"] = "Login";
+$MESS["PROFILE_NAME_TITLE"] = "Name";
+$MESS["PROFILE_LAST_NAME_TITLE"] = "Surname";
+$MESS["PROFILE_OFFSET_TITLE"] = "Time zone offset";
