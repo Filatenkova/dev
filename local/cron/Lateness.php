@@ -93,17 +93,21 @@ while ($arRow = $obResLateness->fetch()) {
 }
 
 // Добавим опоздавших в журнал опозданий
-foreach ($arProfileId as $profile_id) {
-    $arFields = [
-        'profile_id' => (int)$profile_id,
-        'date' => new DateTime(),
-    ];
-    $res = LatenessTable::add($arFields);
+if (!empty($arProfileId)) {
+    foreach ($arProfileId as $profile_id) {
+        $arFields = [
+            'profile_id' => (int)$profile_id,
+            'date' => new DateTime(),
+        ];
+        $res = LatenessTable::add($arFields);
+    }
 }
 
 // Удалим ошибочные записи
-foreach ($arLatenessError as $id) {
-    $res = LatenessTable::delete($id);
+if (!empty($arLatenessError)) {
+    foreach ($arLatenessError as $id) {
+        $res = LatenessTable::delete($id);
+    }
 }
 
 // TODO: добавить запись логов, в задаче не было условий на запись логов

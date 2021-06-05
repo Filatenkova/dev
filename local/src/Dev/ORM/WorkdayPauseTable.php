@@ -4,6 +4,7 @@ namespace DEV\ORM;
 
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\ORM\Data\DataManager;
+use Bitrix\Main\Entity;
 
 /**
  * Class WorkdayPauseTable
@@ -37,6 +38,10 @@ class WorkdayPauseTable extends DataManager
                 'data_type' => 'datetime',
                 'title' => Loc::getMessage('WORKDAY_PAUSE_DATE_STOP_TITLE'),
             ],
+            new Entity\ExpressionField(
+                'date_start_formatting',
+                "DATE_FORMAT(date_start, '%%d.%%m.%%Y')"
+            ),
         ];
     }
 }
